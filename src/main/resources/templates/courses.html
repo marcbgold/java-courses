@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Course Listing</title>
+</head>
+<body>
+	<h2>Course Listing</h2>
+
+	<ul th:each="element: ${courseListing}">
+		<li>
+			<span th:text="|ID# ${element.id}: |"></span>
+			<a href="course.html" th:href="@{course(courseId=${element.id})}" th:text="${element.name}"></a>
+			<span th:text="| (Instructor: ${element.instructor}) - ${element.description}|"></span>
+		</li>
+	</ul>
+</body>
+</html>
