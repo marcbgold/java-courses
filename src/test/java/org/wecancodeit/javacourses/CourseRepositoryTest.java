@@ -10,7 +10,7 @@ public class CourseRepositoryTest {
 	@Test
 	public void shouldFindCourseByID() {
 		CourseRepository underTest = new CourseRepository();
-		Course found = underTest.getCourseByID("00001");
+		Course found = underTest.getCourseByID(00001L);
 
 		assertThat(found.getName(), is("Core Java"));
 	}

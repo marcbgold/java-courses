@@ -2,19 +2,19 @@ package org.wecancodeit.javacourses;
 
 public class Course {
 
-	private String id;
+	private Long id;
 	private String name;
 	private String description;
 	private String instructor;
 
-	public Course(String id, String name, String instructor, String description) {
+	public Course(Long id, String name, String instructor, String description) {
 		this.id = id;
 		this.name = name;
 		this.instructor = instructor;
 		this.description = description;
 	}
 
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 

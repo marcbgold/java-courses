@@ -14,7 +14,7 @@ public class CourseController {
 	CourseRepository repository;
 
 	@RequestMapping("/course")
-	public String showCourse(@RequestParam(value = "courseId", required = true) String id, Model model) {
+	public String showCourse(@RequestParam(value = "courseId", required = true) Long id, Model model) {
 		model.addAttribute("currentCourse", repository.getCourseByID(id));
 		return "course";
 	}
